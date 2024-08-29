@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .site-container {
+    @apply max-w-6xl mx-auto w-full;
+  }
+
+  @screen sm {
+    .site-container {
+      max-width: 640px; 
+    }
+  }
+
+  @screen md {
+    .site-container {
+      max-width: 768px;
+    }
+  }
+
+  @screen lg {
+    .site-container {
+      max-width: 1024px; 
+    }
+  }
+
+  @screen xl {
+    .site-container {
+      max-width: 1280px;
+    }
+  }
+
+  @screen 2xl {
+    .site-container {
+      max-width: 1536px;
+    }
+  }
+
+  .books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .books-grid > div {
+    width: 100%;
+  }
+}
