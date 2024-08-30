@@ -1,18 +1,6 @@
-// react imports
-import { useEffect } from "react";
-
-// react redux
-import { useSelector } from "react-redux";
-import axiosClient from "../utils/axios";
 
 function About() {
-  const { user } = useSelector((state) => state.user);
-  useEffect(() => {
-    if (user) {
-      axiosClient.get("/books");
-    }
-  }, []);
-  return <div>About</div>;
+  return <div className="mb-96">About Page</div>;
 }
 
 export default About;
